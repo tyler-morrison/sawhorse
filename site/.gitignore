@@ -1,5 +1,6 @@
 # Craft
-.htaccess
+public/.htaccess
+config/license.key
 
 # Dotenv
 .env

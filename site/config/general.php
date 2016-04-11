@@ -6,6 +6,25 @@
  * You can see a list of the default settings in craft/app/etc/config/defaults/general.php
  */
 
-return array(
+return [
+  '*' => [
+    'environmentVariables' => [
 
-);
+    ],
+    'enableCsrfProtection' => true,
+    'cpTrigger' => getenv('CRAFT_CPTRIGGER') ?: 'd@sh',
+    'omitScriptNameInUrls' => true,
+    'errorTemplatePrefix' => "_errors/",
+    'convertFilenamesToAscii' => true,
+  ],
+  'development' => [
+    'devMode' => true,
+  ],
+  'staging' => [],
+  'production' => [
+    'sendPoweredByHeader' => false,
+    'useWriteFileLock' => true,
+    'allowAutoUpdates' => 'minor-only',
+    'maxInvalidLogins' => 2,
+  ]
+];
