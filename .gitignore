@@ -1,2 +1,6 @@
 # Craft
 app
+
+# Vagrant
+bin
+.vagrant
