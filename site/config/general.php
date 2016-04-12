@@ -20,7 +20,9 @@ return [
   'development' => [
     'devMode' => true,
   ],
-  'staging' => [],
+  'staging' => [
+    
+  ],
   'production' => [
     'sendPoweredByHeader' => false,
     'useWriteFileLock' => true,
