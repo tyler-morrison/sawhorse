@@ -7,7 +7,7 @@ ip = '192.168.50.5' # pick any local IP
 cpus = 1
 memory = 1024 # in MB
 
-ANSIBLE_PATH = File.join(__dir__, 'ansible') # absolute path to Ansible directory
+ANSIBLE_PATH = __dir__ # absolute path to Ansible directory
 
 # Set Ansible roles_path relative to Ansible directory
 ENV['ANSIBLE_ROLES_PATH'] = File.join(ANSIBLE_PATH, 'vendor', 'roles')

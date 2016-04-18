@@ -54,7 +54,7 @@
     creates: "{{ nginx_path }}/sites-enabled/no-default.conf"
   notify: reload nginx
 
-- name: Create base WordPress config
+- name: Create base Craft CMS config
   template:
     src: craft.conf.j2
     dest: "{{ nginx_path }}/craft.conf"
