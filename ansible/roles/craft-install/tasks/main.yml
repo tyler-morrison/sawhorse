@@ -27,9 +27,14 @@
 - name: Install Craft
   command: craft install /tmp
            --terms
+           --overwrite
   args:
     chdir: "{{ www_root }}/{{ item.key }}/current/"
   register: craft_install_results
   with_dict: "{{ craft_sites }}"
   when: item.value.site_install | default(true)
   changed_when: "'Craft is already installed here!' not in craft_install_results.stdout"
+
+- name: Copy Craft `app` folder
+  command: cp -r /tmp/craft/app {{ www_root }}/{{ item.key }}/shared/app
+  with_dict: "{{ craft_sites }}"

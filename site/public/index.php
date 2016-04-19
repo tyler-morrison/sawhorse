@@ -15,7 +15,7 @@ Env::init();
 $dotenv = new Dotenv\Dotenv($root_dir);
 if (file_exists($root_dir . '/.env')) {
     $dotenv->load();
-    $dotenv->required(['DB_USER', 'DB_PASSWORD', 'DB_NAME', 'CRAFT_SITEURL']);
+    $dotenv->required(['DB_USER', 'DB_PASSWORD', 'DB_NAME', 'CRAFT_HOME']);
 }
 
 /**
@@ -25,7 +25,7 @@ if (file_exists($root_dir . '/.env')) {
 define('CRAFT_ENVIRONMENT', getenv('CRAFT_ENV') ?: 'development');
 
 /** Path to your craft/ folder */
-$craftPath = '../../app';
+$craftPath = '../../shared/app';
 define('CRAFT_BASE_PATH', $root_dir . '/');
 
 /** Do not edit below this line */
