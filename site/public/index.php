@@ -25,7 +25,7 @@ if (file_exists($root_dir . '/.env')) {
 define('CRAFT_ENVIRONMENT', getenv('CRAFT_ENV') ?: 'development');
 
 /** Path to your craft/ folder */
-$craftPath = '../../shared/app';
+$craftPath = '../app';
 define('CRAFT_BASE_PATH', $root_dir . '/');
 
 /** Do not edit below this line */
