@@ -12,7 +12,7 @@ return [
 
     ],
     'enableCsrfProtection' => true,
-    'cpTrigger' => getenv('CRAFT_CPTRIGGER') ?: 'd@sh',
+    'cpTrigger' => getenv('CRAFT_CPTRIGGER') ?: 'admin',
     'omitScriptNameInUrls' => true,
     'errorTemplatePrefix' => "_errors/",
     'convertFilenamesToAscii' => true,
@@ -21,7 +21,7 @@ return [
     'devMode' => true,
   ],
   'staging' => [
-    
+
   ],
   'production' => [
     'sendPoweredByHeader' => false,
